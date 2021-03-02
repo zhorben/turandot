@@ -1,11 +1,7 @@
-import path from "path";
-import axios from "axios";
+import path from "path"
 
 const data = {
   getRoutes: async () => {
-    // const { data: posts } = await axios.get(
-    //   "https://jsonplaceholder.typicode.com/posts"
-    // )
 
     const certificates = [
       {
@@ -29,19 +25,6 @@ const data = {
     ];
 
     return [
-      // {
-      //   path: "/blog",
-      //   getData: () => ({
-      //     posts,
-      //   }),
-      //   children: posts.map((post) => ({
-      //     path: `/post/${post.id}`,
-      //     template: "src/containers/Post",
-      //     getData: () => ({
-      //       post,
-      //     }),
-      //   })),
-      // },
       {
         path: "/",
         getData: () => ({
