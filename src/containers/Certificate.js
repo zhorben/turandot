@@ -3,14 +3,14 @@ import { useRouteData } from 'react-static'
 //
 import { Link } from 'components/Router'
 
-export default function Post() {
-  const { post } = useRouteData()
+export default function Certificate() {
+  const { certificate } = useRouteData()
+
   return (
     <div>
-      <Link to="/blog/">{'<'} Back</Link>
+      <Link to="/">{'<'} Back</Link>
       <br />
-      <h3>{post.title}</h3>
-      <p>{post.body}</p>
+      <h3>{certificate.title}</h3>
     </div>
   )
 }

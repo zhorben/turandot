@@ -1,7 +1,17 @@
 import React from 'react'
+import { useRouteData } from 'react-static'
 
-export default () => (
-  <div style={{ textAlign: 'center' }}>
-    <h1>Welcome to React-Static</h1>
-  </div>
-)
+import Content from 'components/Content'
+
+export default function Index() {
+  const { certificates } = useRouteData()
+
+  return (
+    <div className="container">
+      <div className="title">Подарочные сертификаты</div>
+      <div className="content">
+        {certificates.map((certificate) => <Content {...certificate} key={certificate.id} />)}
+      </div>
+    </div>
+  )
+}
