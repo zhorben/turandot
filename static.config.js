@@ -6,19 +6,31 @@ const data = {
     const certificates = [
       {
         id: 1,
-        title: "Праздничные мероприятия 6, 7, 8 марта",
+        title: "Детская фотосессия",
         imageUrl:
           "https://www.turandot-palace.ru/wp-content/uploads/2021/02/veb-banner-karmen.png",
       },
       {
         id: 2,
-        title: "Латино вечеринка 28 февраля 19:00",
+        title: "Свадебная фотосессия",
         imageUrl:
           "https://www.turandot-palace.ru/wp-content/uploads/2021/02/veb-banner-latino.jpg",
       },
       {
         id: 3,
-        title: "Бранч 23 февраля",
+        title: "Бранч с алкоголем на 2 персоны",
+        imageUrl:
+          "https://www.turandot-palace.ru/wp-content/uploads/2021/02/veb-banner-muzhskoj-branch.jpg",
+      },
+      {
+        id: 4,
+        title: "Бранч без алкоголя на 2 персоны",
+        imageUrl:
+          "https://www.turandot-palace.ru/wp-content/uploads/2021/02/veb-banner-muzhskoj-branch.jpg",
+      },
+      {
+        id: 5,
+        title: "Сертификат на посещение Турандот",
         imageUrl:
           "https://www.turandot-palace.ru/wp-content/uploads/2021/02/veb-banner-muzhskoj-branch.jpg",
       },
