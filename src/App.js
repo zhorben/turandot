@@ -92,7 +92,7 @@ function App() {
               <nav className="menu">
                 <ul className="menu-list">
                   <li className="">
-                    <a href="#" className="menu-link">
+                    <a href="#" className="menu-link menu-link__open">
                       РЕСТОРАН
                     </a>
                     <ul className="sub-menu__list">
@@ -155,7 +155,7 @@ function App() {
                     </ul>
                   </li>
                   <li className="">
-                    <a href="#" className="menu-link">
+                    <a href="#" className="menu-link menu-link__open">
                       МЕНЮ
                     </a>
                     <ul className="sub-menu__list">
