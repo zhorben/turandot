@@ -99,7 +99,7 @@ export default function Certificate(imageUrl, title) {
             <button className="btn btn-form ">Продолжить оформление</button>
           </div>
           <div className="agreement">
-            Нажимая кнопку «Продолжить оформление», Вы принимаете условия <br />
+            Нажимая кнопку «Продолжить оформление», Вы принимаете условия 
             <a
               className="link"
               href="https://turandot-palace.ru/soglashenie/polzovatelskoe-soglashenie-17-11-15.pdf"
