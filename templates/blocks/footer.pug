@@ -1,0 +1,16 @@
+.footer
+  .footer-wrapp
+    .footer-logo
+      a(href="https://wttc.org/")
+        img(src="https://www.turandot-palace.ru/wp-content/uploads/2017/01/Maison-Dellos_new-Logo.png", alt="", width="200px")
+    .footer-sponsor
+      a(href="https://maison-dellos.com/")
+        img(src="https://www.turandot-palace.ru/wp-content/uploads/2021/01/wttc-safetravels_22.png", alt="", width="100px")
+    .footer-wrap
+      .footer-info.
+        © COPYRIGHT 2021 РЕСТОРАН «ТУРАНДОТ», #[a(href="https://maison-dellos.com/") MAISON DELLOS]
+      .footer-links
+        each link in socialLinks
+          .links-item
+            a.links(href=link.href, title=link.title, target="_blank", rel="noopener")
+              img.links-img(src=link.src)

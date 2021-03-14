@@ -30,6 +30,8 @@ fastify.get('/certificate/:id', async ({ params }, reply) => {
   if (certificate) {
     return reply.view('/templates/certificate.pug', { ...data, certificate })
   }
+
+  return reply.view('/templates/404.pug', data)
 })
 
 fastify.get('/congrats', async (req, reply) => reply.view('/templates/congrats.pug', data))
