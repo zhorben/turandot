@@ -1,0 +1,25 @@
+header.header
+  .header-wrap
+    a.logo-img(href='/')
+      img(src="https://www.turandot-palace.ru/wp-content/uploads/2017/02/w.png", alt="")
+    .menu-right
+      .footer-links
+        each link in socialLinks
+          .links-item
+            a.links(href=link.href, title=link.title, target="_blank", rel="noopener")
+              img.links-img(src=link.src)
+      .menu-items
+        nav.menu
+          ul.menu-list
+            each link in menuLinks
+              li(class=link.submenu && "submenu")
+                a.menu-link(href=link.href)
+                  if link.title
+                    = link.title
+                  if link.image
+                    img(src=link.image)
+                if link.submenu
+                  ul.sub-menu__list
+                    each sublink in link.submenu
+                        li
+                          a.sub-menu__link(href=sublink.href)= sublink.title

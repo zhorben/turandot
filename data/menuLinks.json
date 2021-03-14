@@ -1,0 +1,106 @@
+[
+  {
+    "title": "РЕСТОРАН",
+    "submenu": [
+      {
+        "title": "История",
+        "href": "https://www.turandot-palace.ru/istoriya/"
+      },
+      {
+        "title": "Шеф-повар",
+        "href": "https://www.turandot-palace.ru/shef-povar/"
+      },
+      {
+        "title": "Ресторан для свиданий",
+        "href": "https://www.turandot-palace.ru/restoran-dlya-svidanij/"
+      },
+      {
+        "title": "Банкеты",
+        "href": "https://www.turandot-palace.ru/bankety/"
+      },
+      {
+        "title": "Свадьба",
+        "href": "https://www.turandot-palace.ru/svadba-vo-dvorce/"
+      },
+      {
+        "title": "Выездной ресторан",
+        "href": "https://dellos-catering.ru/"
+      },
+      {
+        "title": "Карьера",
+        "href": "https://www.turandot-palace.ru/karera/"
+      }
+    ]
+  },
+  {
+    "title": "МЕНЮ",
+    "submenu": [
+      {
+        "title": "Основное меню",
+        "href": "https://www.turandot-palace.ru/osnovnoe-menyu/"
+      },
+      {
+        "title": "Специальные",
+        "href": "https://www.turandot-palace.ru/specpredlozheniya/"
+      },
+      {
+        "title": "Гастросет Восток-Запад",
+        "href": "https://www.turandot-palace.ru/gastroset-vostok-zapad/"
+      },
+      {
+        "title": "Меню без границ по будням",
+        "href": "https://www.turandot-palace.ru/menyu-bez-granic-v-restorane-turandot/"
+      },
+      {
+        "title": "Винная карта",
+        "href": "https://www.turandot-palace.ru/0_menu/Wine_List.pdf"
+      },
+      {
+        "title": "Коктейльная карта",
+        "href": "https://www.turandot-palace.ru/0_menu/bar_card.pdf"
+      },
+      {
+        "title": "Чайная карта",
+        "href": "https://www.turandot-palace.ru/chajnaya-karta/"
+      }
+    ]
+  },
+  {
+    "title": "ИНТЕРЬЕР",
+    "href": "https://www.turandot-palace.ru/interer/#1"
+  },
+  {
+    "title": "СЕТ ВОСТОК-ЗАПАД",
+    "href": "https://www.turandot-palace.ru/gastroset-vostok-zapad/",
+    "class": "menu-link__set"
+  },
+  {
+    "title": "БРАНЧ",
+    "href": "https://www.turandot-palace.ru/branch/"
+  },
+  {
+    "title": "СОБЫТИЯ",
+    "href": "https://www.turandot-palace.ru/sobytiya/"
+  },
+  {
+    "title": "ДОСТАВКА",
+    "href": "https://dellos-delivery.ru/food-delivery/restoran-turandot/"
+  },
+  {
+    "title": "КОНТАКТЫ",
+    "href": "https://www.turandot-palace.ru/contact/"
+  },
+  {
+    "title": "ЗАБРОНИРОВАТЬ",
+    "href": "https://www.turandot-palace.ru/rezerv/",
+    "class": "menu-link__reserve"
+  },
+  {
+    "href": "https://www.turandot-palace.ru/en/news/",
+    "image": "/public/images/en.png"
+  },
+  {
+    "href": "https://www.turandot-palace.ru/zh/F",
+    "image": "/public/images/cn.png"
+  }
+]

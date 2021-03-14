@@ -6,7 +6,7 @@
 body {
   font-family: "Exo 2";
   line-height: 1.4em;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -46,7 +46,7 @@ nav a {
 }
 
 .header {
-  padding: 40px 0;
+  padding: 20px 0;
   display: flex;
 }
 
@@ -74,24 +74,32 @@ nav a {
   height: 35px;
 }
 
-.menu-link__open::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -0.5em;
-  margin-top: -3px;
-  height: 0;
-  width: 0;
-  border: 5px solid transparent;
-  border-top-color: #ccc;
-}
-
 .menu a {
   line-height: 1.3em;
   letter-spacing: 0.15em;
   font-size: 0.6em;
-  padding: 11.5px 10px;
+  padding: 1.2em 1em;
   font-weight: 700;
+}
+
+.menu li.submenu a::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  right: 1.3em;
+  transform: rotate(90deg);
+  background-image: url("/public/images/arrow-right.svg");
+}
+
+.menu li.submenu > a {
+  padding-right: 2.5em;
+}
+
+.menu li.submenu.open .sub-menu__list {
+  max-height: 500px;
+  opacity: 1;
+  transition: opacity 500ms, max-height 0s;
 }
 
 .menu li {
@@ -109,19 +117,21 @@ nav a {
 }
 
 .menu-list > li:nth-child(4) {
-  background: #ffeb3b;
+  background: linear-gradient(to bottom, #E99C34, #FFEB3B);
+}
+
+.menu-list > li:nth-child(4) a {
+  padding: 11px 30px;
+  color: #000;
 }
 
 .menu-list > li:nth-child(9) {
-  background: #a760b5;
+  background-color: #9743a8;
+  background-image: linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,.01) 100%);
 }
 
 .menu-link:nth-child(9):hover {
   color: #fff;
-}
-
-.menu-list > li:hover .sub-menu__list {
-  display: block;
 }
 
 .menu-link {
@@ -148,13 +158,16 @@ nav a {
 }
 
 .sub-menu__list {
-  display: none;
   width: 175px;
   position: absolute;
   left: 0;
-  top: 20px;
-  padding: 20px 0px 0px 0px;
+  top: calc(100% + 20px);
   border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 500ms, max-height 0s 500ms;
+  max-height: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .sub-menu__list > li {
@@ -162,13 +175,16 @@ nav a {
   padding: 10px 0;
 }
 
-.sub-menu__link {
+.menu a.sub-menu__link {
+  letter-spacing: normal;
+  font-weight: normal;
   color: #555555;
-  padding: 20px 0;
+  font-size: 12px;
+  font-family: "Exo 2";
 }
 
-.menu-items {
-  width: 940px;
+.menu a.sub-menu__link:hover {
+  color: #222;
 }
 
 .content {
@@ -326,9 +342,7 @@ nav a {
 
 .agreement {
   margin: 10px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .link {
