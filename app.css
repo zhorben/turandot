@@ -53,14 +53,14 @@ nav a {
 .header-wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 15px;
-  width: 1280px;
+  width: 1250px;
   margin: 0 auto;
 }
 
 .logo-img {
-  min-width: 220px;
+  width: 220px;
+  height: 32px;
 }
 
 .menu-right {
@@ -69,10 +69,18 @@ nav a {
   justify-content: flex-end;
 }
 
+.burger {
+  display: none;
+}
+
 .menu {
   background-color: rgba(0, 0, 0, 0.61);
   border-radius: 5px;
   height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .menu a {
@@ -118,17 +126,25 @@ nav a {
 }
 
 .menu-list > li:nth-child(4) {
-  background: linear-gradient(to bottom, #E99C34, #FFEB3B);
+  background: linear-gradient(to bottom, #e99c34, #ffeb3b);
 }
 
 .menu-list > li:nth-child(4) a {
-  padding: 11px 30px;
+  padding: 2px 12px;
+  width: 175px;
   color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-list > li:nth-child(9) {
   background-color: #9743a8;
-  background-image: linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,.01) 100%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0,
+    rgba(255, 255, 255, 0.01) 100%
+  );
 }
 
 .menu-link:nth-child(9):hover {
@@ -213,7 +229,7 @@ nav a {
   display: flex;
   flex-direction: column;
   width: 300px;
-  margin: 15px auto;
+  margin: 20px auto;
 }
 
 .content-link {
@@ -249,13 +265,22 @@ nav a {
 
 .btn-form {
   width: 300px;
-  margin: 10px auto;
+  margin: 20px auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.btn-form input {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 18px;
+}
+
 .certificate-info {
+  display: flex;
+  flex-direction: column;
   margin-top: 15px;
 }
 
@@ -271,7 +296,7 @@ nav a {
 
 .contact-form {
   width: 600px;
-  margin: 10px auto;
+  margin: 20px auto;
   border: 1px solid #ccc;
   padding: 10px;
 }
@@ -347,6 +372,8 @@ nav a {
 
 .currency {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
@@ -366,9 +393,6 @@ nav a {
   align-items: center;
   justify-content: center;
   margin: 15px 0;
-}
-
-.footer-sponsor {
 }
 
 .footer-wrap {
@@ -504,7 +528,6 @@ nav a {
 .btn-item {
   margin-right: 10px;
   width: 300px;
-  
 }
 
 .btn-item:last-child {
@@ -553,6 +576,102 @@ nav a {
 
   .footer-links {
     margin: 20px 0;
+  }
+}
+
+@media (max-width: 989px) {
+  .menu-items {
+    height: 0;
+    position: fixed;
+    top: 50px;
+    right: 15px;
+  }
+
+  .menu-right {
+    width: 260px;
+    display: block;
+    background-color: #111;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 30px;
+  }
+
+  .burger span {
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    right: 0;
+    top: 9px;
+  }
+
+  .burger::before,
+  .burger::after {
+    content: "";
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    right: 0;
+  }
+
+  .burger::before {
+    top: 0;
+  }
+
+  .burger::after {
+    bottom: 0;
+  }
+
+  .menu {
+    align-items: baseline;
+    width: 300px;
+    height: 100%;
+    margin-top: 0;
+    background-color: #111;
+    border-radius: none;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: auto;
+    overflow-x: hidden !important;
+    user-select: none;
+  }
+
+  .menu-list > li:nth-child(4),
+  .menu-list > li:nth-child(9) {
+    height: 32px;
+  }
+
+  .menu-list > li:nth-child(9) {
+    border-color: #6dab3c;
+    background-color: #6dab3c;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-menu__list:active {
+    height: 100%;
+  }
+
+  .header-wrap {
+    position: relative;
+  }
+
+  .header-links {
+    margin: 20px 0;
+    top: -30px;
+    right: 150px;
+    position: absolute;
+    z-index: 1;
   }
 }
 

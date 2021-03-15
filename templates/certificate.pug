@@ -4,7 +4,7 @@ block content
   .certificate
     .container
       .title= certificate.title
-      form.certificate-info(method="POST", action="https://demo.paykeeper.ru/create/")
+      form.certificate-info(method="POST" action="https://demo.paykeeper.ru/create/")
         .certificate-wrap
           img.certificate-img(src=certificate.src, alt="")
           .certificate-item= certificate.content
@@ -44,9 +44,10 @@ block content
                 type="email",
                 name="client_email"
               )
-        div
+        .btn.btn-form 
           <input type='submit' value='Продолжить оформление' />
           //- button.btn.btn-form Продолжить оформление
         .agreement.
           Нажимая кнопку «Продолжить оформление», Вы принимаете условия #[a.link(href="https://turandot-palace.ru/soglashenie/polzovatelskoe-soglashenie-17-11-15.pdf") пользовательского соглашения]
-        img.currency(src="https://www.turandot-palace.ru/wp-content/uploads/2018/11/Logo-pay.png", alt="")
+        .currency
+          img(src="/public/images/logo-pay.png" alt="")

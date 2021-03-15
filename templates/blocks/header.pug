@@ -1,9 +1,9 @@
 header.header
   .header-wrap
     a.logo-img(href='/')
-      img(src="https://www.turandot-palace.ru/wp-content/uploads/2017/02/w.png", alt="")
+      img(src="/public/images/bg-logo.png", alt="")
     .menu-right
-      .footer-links
+      .footer-links.header-links
         each link in socialLinks
           .links-item
             a.links(href=link.href, title=link.title, target="_blank", rel="noopener")
@@ -23,3 +23,5 @@ header.header
                     each sublink in link.submenu
                         li
                           a.sub-menu__link(href=sublink.href)= sublink.title
+        .burger 
+          span          
