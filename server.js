@@ -34,9 +34,13 @@ fastify.get('/certificate/:id', async ({ params }, reply) => {
   return reply.view('/templates/404.pug', data)
 })
 
-fastify.get('/congrats', async (req, reply) => reply.view('/templates/congrats.pug', data))
+fastify.get('/success', async (req, reply) => reply.view('/templates/success.pug', data))
 
 fastify.get('/gratitude', async (req, reply) => reply.view('/templates/gratitude.pug', data))
+
+fastify.post('/payments', async (req, reply) => {
+  console.log(req.params, '--- params')
+})
 
 fastify.get('/', async (req, reply) => reply.view('/templates/home.pug', { ...data, certificates }))
 

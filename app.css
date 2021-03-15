@@ -51,11 +51,12 @@ nav a {
 }
 
 .header-wrap {
-  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0 15px;
+  width: 1280px;
+  margin: 0 auto;
 }
 
 .logo-img {
@@ -254,9 +255,6 @@ nav a {
   justify-content: center;
 }
 
-.certificate {
-}
-
 .certificate-info {
   margin-top: 15px;
 }
@@ -269,9 +267,6 @@ nav a {
   width: 450px;
   float: left;
   margin: 16px 20px 15px 0;
-}
-
-.certificate-item {
 }
 
 .contact-form {

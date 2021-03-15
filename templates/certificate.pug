@@ -4,13 +4,14 @@ block content
   .certificate
     .container
       .title= certificate.title
-      .certificate-info
+      form.certificate-info(method="POST", action="https://demo.paykeeper.ru/create/")
         .certificate-wrap
           img.certificate-img(src=certificate.src, alt="")
           .certificate-item= certificate.content
         .active
           label.label(for="sum") СУММА ОПЛАТЫ
           input#sum.write(
+            name="sum"
             placeholder="Введите сумму",
             required,
             type="number",
@@ -20,6 +21,7 @@ block content
         fieldset.contact-form
           legend.form-title Контактные данные
           .form-info Для совершения корректного платежа, укажите свои контактные данные. Необходимо заполнить все поля!
+          //- input(name="user_result_callback" value="https://krasnoevino.ga/success")
           .form-wrap
             .form
               label.label(for="name") ИМЯ *
@@ -29,12 +31,22 @@ block content
               input#lastName.write(required, type="text")
             .form
               label.label(for="phone") ТЕЛЕФОН *
-              input#phone.write(required, type="number", placeholder="89850000000")
+              input#phone.write(
+                required,
+                type="number",
+                name="client_phone",
+                placeholder="89850000000"
+              )
             .form
               label.label(for="email") EMAIL *
-              input#email.write(required, type="email")
+              input#email.write(
+                required,
+                type="email",
+                name="client_email"
+              )
         div
-          button.btn.btn-form Продолжить оформление
+          <input type='submit' value='Продолжить оформление' />
+          //- button.btn.btn-form Продолжить оформление
         .agreement.
           Нажимая кнопку «Продолжить оформление», Вы принимаете условия #[a.link(href="https://turandot-palace.ru/soglashenie/polzovatelskoe-soglashenie-17-11-15.pdf") пользовательского соглашения]
         img.currency(src="https://www.turandot-palace.ru/wp-content/uploads/2018/11/Logo-pay.png", alt="")
