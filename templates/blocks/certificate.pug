@@ -2,4 +2,4 @@
   a.link(href=`/certificate/${certificate.id}`)
     img(src=certificate.src, alt="")
   .info= certificate.title
-    button.btn Купить сертификат
+    a.btn(href=`/certificate/${certificate.id}`) Купить сертификат

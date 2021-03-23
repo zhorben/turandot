@@ -263,6 +263,10 @@ nav a {
   margin-top: 10px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
 }
 
 .btn-form {
