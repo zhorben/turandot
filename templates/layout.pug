@@ -8,8 +8,9 @@ html(lang='ru')
     include ../app.css
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Exo%202:300,700,400,400italic&subset=cyrillic&display=swap&ver=1610738114")
   body
-    include blocks/header
-    block content
-    include blocks/footer
+    .wrapper
+      include blocks/header
+      block content
+      include blocks/footer
     script
       include ../scripts/common.js

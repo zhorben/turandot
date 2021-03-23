@@ -20,6 +20,7 @@ header.header
                     img(src=link.image)
                 if link.submenu
                   ul.sub-menu__list
+                    button.close-submenu(type="button")= link.title
                     each sublink in link.submenu
                         li
                           a.sub-menu__link(href=sublink.href)= sublink.title

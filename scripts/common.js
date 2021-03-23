@@ -5,39 +5,49 @@ window.addEventListener("load", (event) => {
 
   const sublinks = document.querySelectorAll(".submenu");
 
-  const onEnter = (event) => {
-    menuTimeoutIDs.forEach(window.clearTimeout);
-    sublinks.forEach((link) => link.classList.remove("open"));
-    event.target.classList.add("open");
-  }
-
-  const onLeave = (event) => {
-    const isMenuLink = event.relatedTarget.classList.contains("menu-link");
-
-    if (isMenuLink && event.relatedTarget.getAttribute("href")) {
-      return event.target.classList.remove("open");
-    }
-
-    const timeoutID = setTimeout(() => {
-      event.target.classList.remove("open");
-    }, 1000);
-
-    menuTimeoutIDs.push(timeoutID);
-  }
-
   sublinks.forEach((link) => {
-    link.addEventListener("mouseenter", onEnter);
-    link.addEventListener("mouseleave", onLeave);
-    link.addEventListener("click", (event) => {
+    link.addEventListener("mouseenter", (event) => {
+      if (window.innerWidth > 990) {
+        menuTimeoutIDs.forEach(window.clearTimeout);
+        sublinks.forEach((link) => link.classList.remove("open"));
+        event.target.classList.add("open");
+      }
+    });
+
+    link.addEventListener("mouseleave", (event) => {
+      if (window.innerWidth > 990) {
+        const isMenuLink = event.relatedTarget.classList.contains("menu-link");
+
+        if (isMenuLink && event.relatedTarget.getAttribute("href")) {
+          return event.target.classList.remove("open");
+        }
+    
+        const timeoutID = setTimeout(() => {
+          event.target.classList.remove("open");
+        }, 1000);
+    
+        menuTimeoutIDs.push(timeoutID);
+      }
+    });
+
+    link.addEventListener("click", (event) => {      
       if (window.innerWidth <= 990) {
-        onEnter(event)
+        event.target.closest("li.submenu").classList.add("open");
       }
     });
   });
 
   document.querySelector(".burger").addEventListener("click", (event) => {
-    document.body.classList.toggle("open");
+    document.querySelector(".wrapper").classList.toggle("open");
     document.querySelector(".burger").classList.toggle("is-active")
   });
+
+  document.querySelectorAll(".close-submenu").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      event.target.closest("li.open").classList.remove("open");
+    });
+  })
 });
 
