@@ -7,7 +7,7 @@ block content
       form.certificate-info(method="POST" action="https://demo.paykeeper.ru/create/")
         .certificate-wrap
           img.certificate-img(src=certificate.src, alt="")
-          .certificate-item= certificate.content
+          .certificate-item!= certificate.content
         .active
           label.label(for="sum") СУММА ОПЛАТЫ
           input#sum.write(
