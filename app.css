@@ -762,14 +762,13 @@ button.close-submenu::after {
     width: 100%;
     text-align-last: left;
     padding: 10px 20px;
+    display: block;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .menu a.sub-menu__link::after {
     display: none;
-  }
-
-  button.close-submenu {
-    display: block;
   }
 
   button.close-submenu a.sub-menu__link::after {
