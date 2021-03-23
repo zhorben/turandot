@@ -290,6 +290,7 @@ button.close-submenu::after {
   align-items: center;
   justify-content: center;
   font-weight: normal;
+  outline: none;
 }
 
 .btn-form {
