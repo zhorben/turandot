@@ -1,5 +1,5 @@
 const path = require('path')
-const { createHmac } = require('crypto')
+const { md5 } = require('hash-wasm')
 
 const socialLinks = require('./data/socialLinks')
 const menuLinks = require('./data/menuLinks')
@@ -45,7 +45,7 @@ fastify.post('/payments', (req, reply) => {
   console.log(req.body, '--- body')
   const { id, sum, clientid, orderid } = req.body
   console.log(req.body.key, '--- key')
-  console.log(createHmac('md5', id + sum + clientid + orderid + '-uoZuNuzhzomm7ah').digest('hex'), '--- gen key')
+  console.log(md5(id + sum + clientid + orderid + '-uoZuNuzhzomm7ah'), '--- gen key')
 })
 
 fastify.get('/', async (req, reply) => reply.view('/templates/home.pug', { ...data, certificates }))
