@@ -17,9 +17,22 @@ block content
             type="number",
             min="10000",
             max="100000"
+            value=certificate.price ? certificate.price : ""
+            disabled=!!certificate.price
           )
+<<<<<<< HEAD
           input#clientId(
+=======
+          input(
+            value="2132"
+>>>>>>> 34cf2d77afd80768a89dc7dcfda652b49186c08c
             name="clientid"
+            hidden
+            required
+          )
+          input(
+            value=`https://turandotpalace.ru/success/${certificate.id}`
+            name="user_result_callback"
             hidden
             required
           )
