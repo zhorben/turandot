@@ -1,5 +1,5 @@
 const path = require('path')
-const { createHmac } = require('crypto')
+import { md5 } from 'hash-wasm'
 
 const socialLinks = require('./data/socialLinks')
 const menuLinks = require('./data/menuLinks')
@@ -43,7 +43,7 @@ fastify.get('/gratitude', async (req, reply) => reply.view('/templates/gratitude
 
 fastify.post('/payments', (req, reply) => {
   console.log(req.body.key, '--- key')
-  console.log(createHmac('md5', '-uoZuNuzhzomm7ah').digest('hex'))
+  md5('MD5: ', '-uoZuNuzhzomm7ah')
 })
 
 fastify.get('/', async (req, reply) => reply.view('/templates/home.pug', { ...data, certificates }))
