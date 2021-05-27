@@ -41,9 +41,9 @@ fastify.get('/success', async (req, reply) => reply.view('/templates/success.pug
 
 fastify.get('/gratitude', async (req, reply) => reply.view('/templates/gratitude.pug', data))
 
-fastify.post('/payments', (req, reply) => {
+fastify.post('/payments', async (req, reply) => {
   console.log(req.body.key, '--- key')
-  md5('MD5: ', '-uoZuNuzhzomm7ah')
+  console.log(await md5('MD5: ', '-uoZuNuzhzomm7ah'))
 })
 
 fastify.get('/', async (req, reply) => reply.view('/templates/home.pug', { ...data, certificates }))
