@@ -41,11 +41,11 @@ fastify.get('/success', async (req, reply) => reply.view('/templates/success.pug
 
 fastify.get('/gratitude', async (req, reply) => reply.view('/templates/gratitude.pug', data))
 
-fastify.post('/payments', (req, reply) => {
+fastify.post('/payments', async (req, reply) => {
   console.log(req.body, '--- body')
   const { id, sum, clientid, orderid } = req.body
   console.log(req.body.key, '--- key')
-  console.log(md5(id + sum + clientid + orderid + '-uoZuNuzhzomm7ah'), '--- gen key')
+  console.log(await md5(id + sum + clientid + orderid + '-uoZuNuzhzomm7ah'), '--- gen key')
 })
 
 fastify.get('/', async (req, reply) => reply.view('/templates/home.pug', { ...data, certificates }))
