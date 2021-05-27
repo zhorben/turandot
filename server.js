@@ -1,5 +1,6 @@
 const path = require('path')
 const { md5 } = require('hash-wasm')
+const { createHash } = require('crypto')
 
 const socialLinks = require('./data/socialLinks')
 const menuLinks = require('./data/menuLinks')
@@ -45,6 +46,7 @@ fastify.post('/payments', async (req, reply) => {
   console.log(req.body, '--- body')
   const { id, sum, clientid, orderid } = req.body
   console.log(req.body.key, '--- key')
+  console.log(createHash('md5').update(id + sum + clientid + orderid + '-uoZuNuzhzomm7ah').digest("hex"))
   console.log(await md5(id + sum + clientid + orderid + '-uoZuNuzhzomm7ah'), '--- gen key')
 })
 
