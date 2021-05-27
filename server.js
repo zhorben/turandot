@@ -45,7 +45,7 @@ fastify.post('/payments', (req, reply) => {
   console.log(req.body, '--- body')
   const { id, sum, clientid, orderid } = req.body
   console.log(req.body.key, '--- key')
-  console.log(createHmac('md5', '-uoZuNuzhzomm7ah').update(id + sum + clientid + orderid).digest('hex'), '--- gen key')
+  console.log(createHmac('md5', id + sum + clientid + orderid + '-uoZuNuzhzomm7ah').digest('hex'), '--- gen key')
 })
 
 fastify.get('/', async (req, reply) => reply.view('/templates/home.pug', { ...data, certificates }))
