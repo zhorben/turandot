@@ -17,6 +17,8 @@ block content
             type="number",
             min="10000",
             max="100000"
+            value=certificate.price ? certificate.price : ""
+            disabled=!!certificate.price
           )
           input(
             value="2132"
