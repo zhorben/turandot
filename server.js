@@ -37,7 +37,15 @@ fastify.get('/certificate/:id', async ({ params }, reply) => {
   return reply.view('/templates/404.pug', data)
 })
 
-fastify.get('/success', async (req, reply) => reply.view('/templates/success.pug', data))
+fastify.get('/success/:id', async ({ params }, reply) => {
+  const certificate = certificates.find(({ id }) => Number(params.id) === id)
+
+  if (certificate) {
+    return reply.view('/templates/success.pug', { ...data, certificate })
+  }
+
+  return reply.view('/templates/success.pug', data)
+})
 
 fastify.get('/gratitude', async (req, reply) => reply.view('/templates/gratitude.pug', data))
 
