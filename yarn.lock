@@ -692,6 +692,20 @@
   "resolved" "https://registry.npmjs.org/fastify-error/-/fastify-error-0.3.0.tgz"
   "version" "0.3.0"
 
+"fastify-formbody@^5.0.0":
+  "integrity" "sha512-W79/hq6xGyV4lFsgt+qgKHPorGu4RzAhFQ5GKXI0T8DbkEMx+7gjFAD2y+q194vMMiIvMhuE7j6JyCEZVMOHYw=="
+  "resolved" "https://registry.npmjs.org/fastify-formbody/-/fastify-formbody-5.0.0.tgz"
+  "version" "5.0.0"
+  dependencies:
+    "fastify-plugin" "^2.3.2"
+
+"fastify-plugin@^2.3.2":
+  "integrity" "sha512-I+Oaj6p9oiRozbam30sh39BiuiqBda7yK2nmSPVwDCfIBlKnT8YB3MY+pRQc2Fcd07bf6KPGklHJaQ2Qu81TYQ=="
+  "resolved" "https://registry.npmjs.org/fastify-plugin/-/fastify-plugin-2.3.4.tgz"
+  "version" "2.3.4"
+  dependencies:
+    "semver" "^7.3.2"
+
 "fastify-plugin@^3.0.0":
   "integrity" "sha512-ZdCvKEEd92DNLps5n0v231Bha8bkz1DjnPP/aEz37rz/q42Z5JVLmgnqR4DYuNn3NXAO3IDCPyRvgvxtJ4Ym4w=="
   "resolved" "https://registry.npmjs.org/fastify-plugin/-/fastify-plugin-3.0.0.tgz"
