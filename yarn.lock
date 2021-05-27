@@ -1009,11 +1009,6 @@
   dependencies:
     "function-bind" "^1.1.1"
 
-"hash-wasm@^4.6.0":
-  "integrity" "sha512-Wi96tJDftxUQciCUi2Vs/Nw8al3psRATe/FhyezrajJKCXKRHvpiFARTZuUgdlGB7825LiN+FluH7SFoGdiGRA=="
-  "resolved" "https://registry.npmjs.org/hash-wasm/-/hash-wasm-4.6.0.tgz"
-  "version" "4.6.0"
-
 "hashlru@^2.3.0":
   "integrity" "sha512-0cMsjjIC8I+D3M44pOQdsy0OHXGLVz6Z0beRuufhKa0KfaD2wGwAev6jILzXsd3/vpnNQJmWyZtIILqM1N+n5A=="
   "resolved" "https://registry.npmjs.org/hashlru/-/hashlru-2.3.0.tgz"
