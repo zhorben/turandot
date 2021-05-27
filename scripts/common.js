@@ -21,16 +21,16 @@ window.addEventListener("load", (event) => {
         if (isMenuLink && event.relatedTarget.getAttribute("href")) {
           return event.target.classList.remove("open");
         }
-    
+
         const timeoutID = setTimeout(() => {
           event.target.classList.remove("open");
         }, 1000);
-    
+
         menuTimeoutIDs.push(timeoutID);
       }
     });
 
-    link.addEventListener("click", (event) => {      
+    link.addEventListener("click", (event) => {
       if (window.innerWidth <= 990) {
         event.target.closest("li.submenu").classList.add("open");
       }
@@ -39,7 +39,7 @@ window.addEventListener("load", (event) => {
 
   document.querySelector(".burger").addEventListener("click", (event) => {
     document.querySelector(".wrapper").classList.toggle("open");
-    document.querySelector(".burger").classList.toggle("is-active")
+    document.querySelector(".burger").classList.toggle("is-active");
   });
 
   document.querySelectorAll(".close-submenu").forEach((item) => {
@@ -48,6 +48,23 @@ window.addEventListener("load", (event) => {
       event.stopPropagation();
       event.target.closest("li.open").classList.remove("open");
     });
-  })
-});
+  });
 
+  // const firstName = document.querySelectorAll("#firstName");
+  // const lastName = document.querySelectorAll("#lastName");
+  // const clienId = document.querySelectorAll("#clienId");
+
+  // const inputValue =  document.addEventListener("oninput", (event) => {
+
+  // })
+  //   let concatInputValue = firstName.value + " " + lastName.value;
+  //   clienId.value = concatInputValue;
+
+  firstName.oninput = function (event) {
+    clientId.value = event.target.value + " " + lastName.value;
+  };
+
+  lastName.oninput = function (event) {
+    clientId.value = firstName.value + " " + event.target.value;
+  };
+});
