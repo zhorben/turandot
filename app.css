@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   position: relative;
   width: 100%;
@@ -306,6 +307,7 @@ button.close-submenu::after {
   background: none;
   color: #fff;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .certificate-info {
@@ -364,7 +366,7 @@ button.close-submenu::after {
 .label {
   text-align: center;
   margin-bottom: 10px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .write {
@@ -564,6 +566,15 @@ button.close-submenu::after {
 
 .btn-item:last-child {
   margin-right: 0;
+}
+
+.price-placeholder {
+  background: rgba(100, 100, 100, 0.09);
+  min-height: 50px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 1200px) {
