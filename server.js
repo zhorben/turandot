@@ -1,5 +1,5 @@
 const path = require('path')
-import { md5 } from 'hash-wasm'
+const { md5 } = require('hash-wasm')
 
 const socialLinks = require('./data/socialLinks')
 const menuLinks = require('./data/menuLinks')
