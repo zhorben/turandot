@@ -40,8 +40,9 @@ fastify.get('/success', async (req, reply) => reply.view('/templates/success.pug
 
 fastify.get('/gratitude', async (req, reply) => reply.view('/templates/gratitude.pug', data))
 
-fastify.post('/payments', async (req, reply) => {
+fastify.post('/payments', (req, reply) => {
   console.log(req.params, '--- params')
+  console.log(req)
 })
 
 fastify.get('/', async (req, reply) => reply.view('/templates/home.pug', { ...data, certificates }))
