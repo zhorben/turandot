@@ -14,11 +14,14 @@ block content
             name="sum"
             placeholder="Введите сумму",
             required,
-            type="text",
+            type="number",
             min="10000",
             max="100000"
             value=certificate.price ? certificate.price : ""
+            hidden=!!certificate.price
           )
+          if certificate.price
+            .price-placeholder= certificate.price
           input#clientId(
             name="clientid"
             hidden
