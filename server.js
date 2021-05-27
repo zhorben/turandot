@@ -1,4 +1,5 @@
 const path = require('path')
+const { createHmac } = require('crypto')
 
 const socialLinks = require('./data/socialLinks')
 const menuLinks = require('./data/menuLinks')
@@ -41,8 +42,8 @@ fastify.get('/success', async (req, reply) => reply.view('/templates/success.pug
 fastify.get('/gratitude', async (req, reply) => reply.view('/templates/gratitude.pug', data))
 
 fastify.post('/payments', (req, reply) => {
-  console.log(req.params, '--- params')
-  console.log(req)
+  console.log(req.body.key, '--- key')
+  console.log(createHmac('md5').update('-uoZuNuzhzomm7ah').digest('hex'), '--- gen key')
 })
 
 fastify.get('/', async (req, reply) => reply.view('/templates/home.pug', { ...data, certificates }))

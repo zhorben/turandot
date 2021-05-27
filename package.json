@@ -5,6 +5,7 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "esbuild": "^0.9.2",
     "fastify": "^3.14.0",
     "fastify-formbody": "^5.0.0",
