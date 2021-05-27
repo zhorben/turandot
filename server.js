@@ -43,7 +43,7 @@ fastify.get('/gratitude', async (req, reply) => reply.view('/templates/gratitude
 
 fastify.post('/payments', (req, reply) => {
   console.log(req.body.key, '--- key')
-  console.log(createHmac('md5', '-uoZuNuzhzomm7ah'))
+  console.log(createHmac('md5', '-uoZuNuzhzomm7ah').digest('hex'))
 })
 
 fastify.get('/', async (req, reply) => reply.view('/templates/home.pug', { ...data, certificates }))
